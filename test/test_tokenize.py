@@ -1,7 +1,6 @@
 # This is test for tokenize module.
 
 from src.tokenize import tokenize
-from src.tokenize import tokenize
 
 tokenize_instance = tokenize()
 

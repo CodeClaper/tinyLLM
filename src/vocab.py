@@ -13,7 +13,7 @@ class vocab:
         return {token: integer for integer, token in enumerate(all_words)}
 
     ## vocab file.
-    def vacab_file(self, file_path: str) -> dict[str, int]:
+    def vocab_file(self, file_path: str) -> dict[str, int]:
         tokens = self.tokenize_instance.tokenize_file(file_path)
         all_words = sorted(set(tokens))
         return {token: integer for integer, token in enumerate(all_words)}
