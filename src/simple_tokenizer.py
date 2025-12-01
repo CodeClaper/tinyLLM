@@ -12,7 +12,8 @@ class SimpleTokenizer:
     ## Encode text to number array.
     def encode(self, text: str) -> list[int]:
         tokens = self.tokenize_instance.tokenize_text(text)
-        ids = [self.str_to_int[s] for s in tokens]
+        tokens = [item if item in self.str_to_int else "<|unk|>" for item in tokens]
+        ids = [self.str_to_int[s]  for s in tokens]
         return ids
     
     ## Decode number array to text.

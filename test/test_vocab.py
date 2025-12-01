@@ -12,5 +12,5 @@ def test_token_text():
 ## test for function <tokenize_file>
 def test_token_file():
     ret = vocab_instance.vocab_file("./the-verdict.txt")
-    assert sorted(ret.items())[:20] == [('!', 0), ('"', 1), ("'", 2), ('(', 3), (')', 4), (',', 5), ('--', 6), ('.', 7), (':', 8), (';', 9), ('?', 10), ('A', 11), ('Ah', 12), ('Among', 13), ('And', 14), ('Are', 15), ('Arrt', 16), ('As', 17), ('At', 18), ('Be', 19)]
+    assert sorted(ret.items())[:20] == [('!', 0), ('"', 1), ("'", 2), ('(', 3), (')', 4), (',', 5), ('--', 6), ('.', 7), (':', 8), (';', 9), ('<|endoftext|>', 1130), ('<|unk|>', 1131), ('?', 10), ('A', 11), ('Ah', 12), ('Among', 13), ('And', 14), ('Are', 15), ('Arrt', 16), ('As', 17)]
 

@@ -1,6 +1,5 @@
 # This is test for SimpleTokenizer module.
 
-import pytest
 from src.simple_tokenizer import SimpleTokenizer
 from src.vocab import Vocab
 
@@ -22,7 +21,7 @@ def test_decode():
     assert text == '" It\' s the last he said, you know," Mrs. Gisburn said with pardonable pride.'
 
 ## test raise key error.
-def test_key_error():
+def test_unk_token():
     text = "Hello, do you like tea?"
-    with pytest.raises(KeyError):
-         simple_tokenizer_instance.encode(text)
+    ids = simple_tokenizer_instance.encode(text)
+    assert ids == [1131, 5, 355, 1126, 628, 975, 10]
