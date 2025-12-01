@@ -1,8 +1,8 @@
 # This is test for tokenize module.
 
-from src.tokenize import Tokenize
+from src.tokenizer import Tokenizer
 
-tokenize_instance = Tokenize()
+tokenize_instance = Tokenizer()
 
 ## test for function <tokenize_text>
 def test_token_text():

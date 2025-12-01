@@ -1,10 +1,10 @@
 ## This module aims to generate vocabulary.
 
-from src.tokenize import Tokenize
+from src.tokenizer import Tokenizer
 
 class Vocab:
     def __init__(self) -> None:
-        self.tokenize_instance = Tokenize()
+        self.tokenize_instance = Tokenizer()
 
     ## vocab text.
     def vocab_text(self, text: str) -> dict[str, int]:

@@ -2,7 +2,7 @@
 
 import re
 
-class Tokenize:
+class Tokenizer:
     def __init__(self) -> None:
         pass
 
