@@ -1,3 +1,2 @@
 #!/usr/bin/bash
-
-cd test && pytest -vv
+cd test && python3 -m pytest -vv
