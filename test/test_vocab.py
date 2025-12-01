@@ -7,7 +7,7 @@ vocab_instance = Vocab()
 ## test for function <tokenize_text>
 def test_token_text():
     ret = vocab_instance.vocab_text("Hello world, this is a test.")
-    assert ret == {',': 0, '.': 1, 'Hello': 2, 'a': 3, 'is': 4, 'test': 5, 'this': 6, 'world': 7}
+    assert ret == {',': 0, '.': 1, 'Hello': 2, 'a': 3, 'is': 4, 'test': 5, 'this': 6, 'world': 7, '<|endoftext|>': 8, '<|unk|>': 9}
 
 ## test for function <tokenize_file>
 def test_token_file():

@@ -10,6 +10,7 @@ class Vocab:
     def vocab_text(self, text: str) -> dict[str, int]:
         tokens = self.tokenize_instance.tokenize_text(text)
         all_words = sorted(set(tokens))
+        all_words.extend(["<|endoftext|>", "<|unk|>"])
         return {token: integer for integer, token in enumerate(all_words)}
 
     ## vocab file.
