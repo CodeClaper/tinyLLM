@@ -1,8 +1,8 @@
 # This is test for vacab module.
 
-from src.vocab import vocab
+from src.vocab import Vocab
 
-vocab_instance = vocab()
+vocab_instance = Vocab()
 
 ## test for function <tokenize_text>
 def test_token_text():
