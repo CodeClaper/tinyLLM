@@ -32,12 +32,3 @@ def create_dataloader(text, batch_size=4, max_length=256, stride=128,
         num_workers=num_workers
     )
     return dataloader
-
-
-if __name__ == '__main__':
-    with open("test/the-verdict.txt", "r", encoding="utf-8") as f:
-        raw_text = f.read()
-    dataloader = create_dataloader(raw_text, batch_size=1, max_length=4, stride=1, shuffle=False)
-    data_iter = iter(dataloader)
-    first_batch = next(data_iter)
-    print(first_batch)
