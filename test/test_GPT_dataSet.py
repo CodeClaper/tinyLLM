@@ -1,6 +1,6 @@
 # This is test for GPTDataSet module.
 
-from src.GPTDataset import create_dataloader
+from src.GPT_dataset import create_dataloader
 
 def test_create_dataloader():
     with open("./the-verdict.txt", "r", encoding="utf-8") as f:

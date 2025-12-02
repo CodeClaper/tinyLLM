@@ -1,13 +1,13 @@
 ## This module is a simple tokenizer supports <encode> and <decode> meothods.
 
 import re
-from src.tokenize import Tokenize
+from src.tokenizer import Tokenizer
 
 class SimpleTokenizer:
     def __init__(self, vocab) -> None:
         self.str_to_int = vocab
         self.int_to_str = { i : s for s,i in vocab.items()}
-        self.tokenize_instance = Tokenize()
+        self.tokenize_instance = Tokenizer()
 
     ## Encode text to number array.
     def encode(self, text: str) -> list[int]:
