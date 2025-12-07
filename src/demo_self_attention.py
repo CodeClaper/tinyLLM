@@ -1,5 +1,8 @@
 import torch
 
+from self_attention_v1 import SelfAttentionV1
+from self_attention_v2 import SelfAttentionV2
+
 inputs = torch.tensor(
     [[0.43, 0.15, 0.89], # Your 
      [0.55, 0.87, 0.66], # journey
@@ -92,3 +95,10 @@ print(attn_weights2)
 context_vec2= attn_weights2 @ values
 print(context_vec2)
 
+torch.manual_seed(123)
+sa_v1 = SelfAttentionV1(d_in, d_out)
+print(sa_v1(inputs))
+
+torch.manual_seed(789)
+sa_v2 = SelfAttentionV2(d_in, d_out)
+print(sa_v2(inputs))
