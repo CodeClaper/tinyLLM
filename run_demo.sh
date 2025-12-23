@@ -10,3 +10,5 @@ echo "=========================================="
 python3 -m demo.demo_multi_head_attention
 echo "=========================================="
 python3 -m demo.demo_dummy_gpt_model
+echo "=========================================="
+python3 -m demo.demo_transformer_block
