@@ -1,7 +1,9 @@
 import tiktoken
 import torch
 import torch.nn as nn
-from src.dummy_gtp_model import DummyGPTModel, LayerNorm, FeedForward, ExampleDeepNeuralNetwork, print_gradients
+from src.dummy_gtp_model import DummyGPTModel, ExampleDeepNeuralNetwork, print_gradients
+from src.feed_forward import FeedForward
+from src.layer_norm import LayerNorm
 
 GPT_CONFIG_124M = {
     "vocab_size": 50257,
