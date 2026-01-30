@@ -1,7 +1,7 @@
 import tiktoken
 import torch
 import torch.nn as nn
-from src.dummy_gtp_model import DummyGPTModel, ExampleDeepNeuralNetwork, print_gradients
+from src.dummy_gtp_model import DummyGPTModel 
 from src.feed_forward import FeedForward
 from src.layer_norm import LayerNorm
 
@@ -63,15 +63,5 @@ ffn = FeedForward(GPT_CONFIG_124M)
 x = torch.rand(2, 3, 768)
 out = ffn(x)
 print(out.shape)
-
-layer_sizes = [3, 3, 3, 3, 3, 1]
-sample_input = torch.tensor([1., 0., -1.])
-torch.manual_seed(123)
-model_without_shortcut = ExampleDeepNeuralNetwork(layer_sizes, use_shortcut=False)
-print_gradients(model_without_shortcut, sample_input)
-print("******************************************************")
-torch.manual_seed(123)
-modle_with_shortcut = ExampleDeepNeuralNetwork(layer_sizes, use_shortcut=True)
-print_gradients(modle_with_shortcut, sample_input)
 
 
