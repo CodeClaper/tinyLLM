@@ -16,3 +16,5 @@ echo "=========================================="
 python3 -m demo.demo_gpt_model
 echo "=========================================="
 python3 -m demo.demo_example_deep_neural_network
+echo "=========================================="
+python3 -m demo.demo_train_model_simple

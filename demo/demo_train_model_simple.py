@@ -1,6 +1,5 @@
 import torch
 import tiktoken
-from torch.cuda import temperature
 from src.GPT_dataset import create_dataloader
 from src.gpt_model import GPTModel, generate, text_to_token_ids, token_ids_to_text
 from src.train_model_simple import train_model_simple
@@ -23,6 +22,7 @@ total_params = sum(p.numel() for p in model.parameters())
 print(f"Total number of parameters: {total_params}")
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+model.to(device)
 optimizer = torch.optim.AdamW(model.parameters(), lr=0.0004, weight_decay=0.1)
 with open("./test/the-verdict.txt", "r", encoding="utf-8") as file:
     text_data = file.read()
