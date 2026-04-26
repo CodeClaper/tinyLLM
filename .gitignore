@@ -25,6 +25,7 @@ gpt2/
 *.egg-info/
 .installed.cfg
 *.egg
+.model.pth
 MANIFEST
 
 # PyInstaller
